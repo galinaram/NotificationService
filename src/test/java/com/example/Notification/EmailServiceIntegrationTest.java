@@ -36,13 +36,12 @@ class EmailServiceIntegrationTest {
     void testSendUserCreationEmail() {
         System.out.println("=== Testing user creation email ===");
 
-        // Настраиваем мок чтобы не пытаться отправлять реальные email
         doNothing().when(mailSender).send((MimeMessage) any());
 
         assertDoesNotThrow(() -> {
             emailService.sendUserCreationEmail("test@example.com");
         });
-        System.out.println("✓ User creation email test passed");
+        System.out.println("User creation email test passed");
     }
 
     @Test
@@ -54,6 +53,6 @@ class EmailServiceIntegrationTest {
         assertDoesNotThrow(() -> {
             emailService.sendUserDeletionEmail("test@example.com");
         });
-        System.out.println("✓ User deletion email test passed");
+        System.out.println("User deletion email test passed");
     }
 }

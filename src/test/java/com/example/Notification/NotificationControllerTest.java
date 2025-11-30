@@ -52,7 +52,7 @@ class NotificationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Email sent successfully"));
 
-        System.out.println("✓ Send email API test passed");
+        System.out.println("Send email API test passed");
     }
 
     @Test
@@ -68,7 +68,7 @@ class NotificationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Creation email sent successfully"));
 
-        System.out.println("✓ User created notification API test passed");
+        System.out.println("User created notification API test passed");
     }
 
     @Test
@@ -84,6 +84,6 @@ class NotificationControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Deletion email sent successfully"));
 
-        System.out.println("✓ User deleted notification API test passed");
+        System.out.println("User deleted notification API test passed");
     }
 }
